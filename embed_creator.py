@@ -8,7 +8,10 @@
 @client.command()
 @commands.cooldown(1, 30, commands.BucketType.guild)
 @commands.guild_only()
-async def embed(ctx, channel: discord.TextChannel):
+async def embed(ctx, channel: discord.TextChannel=None):
+    if not channel:
+        channel = ctx.channel
+    
     def check(message):
         return message.author == ctx.author and message.channel == ctx.channel 
     guide = await ctx.send("Welcome to the Embed Creation Tool. Follow the guide's steps to complete the creation of your embed.\nYou can generate a template embed to learn more about embeds with ``[prefix]template``\nIf you want to leave an element empty, type 0.\n**REMINDER: **Steps with an asterisk ('*') are required and cannot be left empty. Special arguments are case insensitive")
