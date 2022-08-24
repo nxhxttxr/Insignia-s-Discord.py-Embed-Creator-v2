@@ -4,3 +4,6 @@ Insignia's Discord.py Embed Creator v2
       [prefix]embed (channel: discord.TextChannel=None)
                          ↳ if None:
                                channel = ctx.channel
+                               
+
+Example Image: https://imgur.com/a/h9oTLSr
